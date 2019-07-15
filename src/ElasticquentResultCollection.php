@@ -65,7 +65,7 @@ class ElasticquentResultCollection extends \Illuminate\Database\Eloquent\Collect
 	 */
 	public function totalHits()
 	{
-		return $this->hits['total'];
+		return $this->hits['total']['value'];
 	}
 	
 	/**
@@ -118,7 +118,7 @@ class ElasticquentResultCollection extends \Illuminate\Database\Eloquent\Collect
 	 */
 	public function getHits()
 	{
-		return $this->hits;
+		return $this->hits['hits'];
 	}
 	
 	/**
