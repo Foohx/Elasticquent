@@ -457,47 +457,6 @@ trait ElasticquentTrait
 	}
 	
 	/**
-	 * Delete Mapping
-	 *
-	 * @return array
-	 */
-	public static function deleteMapping()
-	{
-		// TODO: Remove because no longer support
-		// https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-delete-mapping.html
-		$instance = new static;
-		
-		$params = $instance->getBasicEsParams();
-		
-		return $instance->getElasticSearchClient()->indices()->deleteMapping($params);
-	}
-	
-	/**
-	 * Rebuild Mapping
-	 *
-	 * This will delete and then re-add
-	 * the mapping for this model.
-	 *
-	 * @return array
-	 */
-	public static function rebuildMapping()
-	{
-		// TODO: Remove because no longer support
-		// https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-delete-mapping.html
-		$instance = new static;
-		
-		// If the mapping exists, let's delete it.
-		if ($instance->mappingExists()) {
-			$instance->deleteMapping();
-		}
-		
-		// Don't need ignore conflicts because if we
-		// just removed the mapping there shouldn't
-		// be any conflicts.
-		return $instance->putMapping();
-	}
-	
-	/**
 	 * Create Index
 	 *
 	 * @param int $shards
