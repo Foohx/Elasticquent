@@ -524,11 +524,11 @@ trait ElasticquentTrait
 		}
 		
 		$mappingProperties = $instance->getMappingProperties();
-//		dd($mappingProperties);
 		if (!is_null($mappingProperties)) {
-			// TODO
-			$index['body']['mappings'][$instance->getTypeName()] = [
-				'_source' => ['enabled' => true],
+			$index['body']['mappings'] = [
+				'_source' => [
+					'enabled' => true,
+				],
 				'properties' => $mappingProperties,
 			];
 		}
