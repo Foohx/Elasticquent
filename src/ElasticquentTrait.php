@@ -5,6 +5,7 @@ namespace Elasticquent;
 use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
+use phpDocumentor\Reflection\Types\Boolean;
 use ReflectionMethod;
 
 /**
@@ -283,12 +284,14 @@ trait ElasticquentTrait
 	/**
 	 * Add to Search Index
 	 *
+	 * @param bool $check_exits
+	 *
 	 * @return array
 	 * @throws Exception
 	 */
-	public function addToIndex()
+	public function addToIndex($checkExits=true)
 	{
-		if (!$this->exists) {
+		if ($checkExits && !$this->exists) {
 			throw new Exception('Document does not exist.');
 		}
 		
@@ -302,7 +305,9 @@ trait ElasticquentTrait
 		// other than an auto-incrementing value. That way we
 		// can do things like remove the document from
 		// the index, or get the document from the index.
-		$params['id'] = $this->getKey();
+		if ($checkExits){
+			$params['id'] = $this->getKey();
+		}
 		
 		return $this->getElasticSearchClient()->index($params);
 	}

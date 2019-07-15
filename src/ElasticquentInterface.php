@@ -71,9 +71,11 @@ interface ElasticquentInterface
 	/**
 	 * Add to Search Index
 	 *
+	 * @param bool $checkExists
+	 *
 	 * @return
 	 */
-	public function addToIndex();
+	public function addToIndex($checkExists=true);
 	
 	/**
 	 * Remove From Search Index
