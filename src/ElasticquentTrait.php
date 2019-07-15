@@ -445,12 +445,14 @@ trait ElasticquentTrait
 		$mapping = $instance->getBasicEsParams();
 		
 		$params = [
-			'_source' => ['enabled' => true],
+			'_source' => [
+				'enabled' => true
+			],
 			'properties' => $instance->getMappingProperties(),
 		];
 		
 		// TODO
-		$mapping['body'][$instance->getTypeName()] = $params;
+		$mapping['body'] = $params;
 		
 		return $instance->getElasticSearchClient()->indices()->putMapping($mapping);
 	}
