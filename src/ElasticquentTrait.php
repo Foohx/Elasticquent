@@ -519,22 +519,6 @@ trait ElasticquentTrait
 	}
 	
 	/**
-	 * Type Exists.
-	 *
-	 * Does this type exist?
-	 *
-	 * @return bool
-	 */
-	public static function typeExists()
-	{
-		$instance = new static;
-		
-		$params = $instance->getBasicEsParams();
-		
-		return $instance->getElasticSearchClient()->indices()->existsType($params);
-	}
-	
-	/**
 	 * New From Hit Builder
 	 *
 	 * Variation on newFromBuilder. Instead, takes

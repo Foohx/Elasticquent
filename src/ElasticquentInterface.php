@@ -128,24 +128,7 @@ interface ElasticquentInterface
 	 *
 	 * @return
 	 */
-	public static function putMapping($ignoreConflicts = false);
-	
-	/**
-	 * Delete Mapping
-	 *
-	 * @return
-	 */
-	public static function deleteMapping();
-	
-	/**
-	 * Rebuild Mapping
-	 *
-	 * This will delete and then re-add
-	 * the mapping for this model.
-	 *
-	 * @return
-	 */
-	public static function rebuildMapping();
+	public static function putMapping();
 	
 	/**
 	 * Get Mapping
