@@ -8,7 +8,7 @@ Elasticquent uses the [official Elasticsearch PHP API](https://github.com/elasti
 
 # Elasticsearch Requirements
 
-You must be running _at least_ Elasticsearch 1.0. Elasticsearch 0.9 and below *will not work* and are not supported.
+You must be running _at least_ Elasticsearch `7.0`. Previous versions *will not work* and are not supported.
 
 ## Contents
 
@@ -33,7 +33,7 @@ You must be running _at least_ Elasticsearch 1.0. Elasticsearch 0.9 and below *w
 
 ## Reporting Issues
 
-If you do find an issue, please feel free to report it with [GitHub's bug tracker](https://github.com/elasticquent/Elasticquent/issues) for this project.
+If you do find an issue, please feel free to report it with [GitHub's bug tracker](https://github.com/Foohx/Elasticquent/issues) for this project.
 
 Alternatively, fork the project and make a pull request :)
 
@@ -73,7 +73,7 @@ Before you start using Elasticquent, make sure you've installed [Elasticsearch](
 
 To get started, add Elasticquent to you composer.json file:
 
-    "elasticquent/elasticquent": "dev-master"
+    "foohx/elasticquent": "dev-master"
 
 Once you've run a `composer update`, you need to register Laravel service provider, in your `config/app.php`:
 
