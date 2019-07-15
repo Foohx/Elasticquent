@@ -438,7 +438,7 @@ trait ElasticquentTrait
 	 *
 	 * @return array
 	 */
-	public static function putMapping($ignoreConflicts = false)
+	public static function putMapping()
 	{
 		$instance = new static;
 		
@@ -451,7 +451,6 @@ trait ElasticquentTrait
 			'properties' => $instance->getMappingProperties(),
 		];
 		
-		// TODO
 		$mapping['body'] = $params;
 		
 		return $instance->getElasticSearchClient()->indices()->putMapping($mapping);
@@ -464,6 +463,8 @@ trait ElasticquentTrait
 	 */
 	public static function deleteMapping()
 	{
+		// TODO: Remove because no longer support
+		// https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-delete-mapping.html
 		$instance = new static;
 		
 		$params = $instance->getBasicEsParams();
@@ -481,6 +482,8 @@ trait ElasticquentTrait
 	 */
 	public static function rebuildMapping()
 	{
+		// TODO: Remove because no longer support
+		// https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-delete-mapping.html
 		$instance = new static;
 		
 		// If the mapping exists, let's delete it.
