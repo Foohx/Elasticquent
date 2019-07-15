@@ -26,13 +26,6 @@ interface ElasticquentInterface
 	public function getIndexName();
 	
 	/**
-	 * Get Type Name
-	 *
-	 * @return string
-	 */
-	public function getTypeName();
-	
-	/**
 	 * Uses Timestamps In Index.
 	 */
 	public function usesTimestampsInIndex();

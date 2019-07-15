@@ -40,7 +40,6 @@ trait ElasticquentCollectionTrait
 				$params['body'][] = [
 					'index' => [
 						'_id' => $item->getKey(),
-						'_type' => $item->getTypeName(),
 						'_index' => $item->getIndexName(),
 					],
 				];
@@ -84,7 +83,6 @@ trait ElasticquentCollectionTrait
 			$params['body'][] = [
 				'delete' => [
 					'_id' => $item->getKey(),
-					'_type' => $item->getTypeName(),
 					'_index' => $item->getIndexName(),
 				],
 			];
