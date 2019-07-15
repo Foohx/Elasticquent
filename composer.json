@@ -1,40 +1,28 @@
 {
-  "name": "elasticquent/elasticquent",
-  "type": "library",
-  "description": "Maps Laravel Eloquent models to Elasticsearch types.",
-  "keywords": [
-    "elasticsearch",
-    "eloquent",
-    "laravel"
-  ],
-  "homepage": "https://github.com/elasticquent/Elasticquent",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Adam Fairholm",
-      "email": "adam.fairholm@gmail.com",
-      "homepage": "http://adamfairholm.com"
+    "name": "foohx/elasticquent",
+    "description": "Maps Laravel Eloquent models to Elasticsearch types.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Robin Guinant",
+            "email": "robin@guinant.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.2.0",
+        "illuminate/database": "~4.2|^5",
+        "illuminate/config": "~4.2|^5",
+        "nesbot/carbon": "~1.0|~2",
+        "elasticsearch/elasticsearch": "~7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.3@dev",
+        "mockery/mockery": "^0.9.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Elasticquent\\": "src/"
+        }
     }
-  ],
-  "require": {
-    "php": ">=5.4.0",
-    "illuminate/database": "~4.2|^5",
-    "illuminate/config": "~4.2|^5",
-    "nesbot/carbon": "~1.0|~2",
-    "elasticsearch/elasticsearch": "~6.1"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "~4.2|~5.0",
-    "mockery/mockery": "^0.9.4"
-  },
-  "autoload": {
-    "psr-4": {
-      "Elasticquent\\": "src/"
-    }
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "1.0-dev"
-    }
-  }
 }

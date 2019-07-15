@@ -9,13 +9,13 @@ use Illuminate\Support\Facades\Facade;
  */
 class ElasticquentElasticsearchFacade extends Facade
 {
-    /**
-     * Get the registered name of the component.
-     *
-     * @return string
-     */
-    protected static function getFacadeAccessor()
-    {
-        return 'elasticquent.elasticsearch';
-    }
+	/**
+	 * Get the registered name of the component.
+	 *
+	 * @return string
+	 */
+	protected static function getFacadeAccessor()
+	{
+		return 'elasticquent.elasticsearch';
+	}
 }
